@@ -1,0 +1,84 @@
+services:
+  # ============================================================
+  # MiroFish — Multi-Agent AI Prediction Engine (UI + Backend)
+  # Patched to use Neo4j instead of Zep Cloud
+  # ============================================================
+  mirofish:
+    image: ghcr.io/666ghj/mirofish:latest
+    container_name: mirofish
+    ports:
+      - "3000:3000"
+      - "5001:5001"
+    env_file:
+      - .env
+    volumes:
+      - ./output:/app/backend/uploads
+      - ./patches:/patches:ro
+    entrypoint: ["/bin/bash", "/patches/entrypoint.sh"]
+    depends_on:
+      - neo4j
+      - chromadb
+    restart: unless-stopped
+    networks:
+      - mirofish-net
+
+  # ============================================================
+  # Neo4j — Local Graph Database (replaces Zep Cloud)
+  # ============================================================
+  neo4j:
+    image: neo4j:5-community
+    container_name: mirofish-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    environment:
+      - NEO4J_AUTH=neo4j/mirofish2026
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+    restart: unless-stopped
+    networks:
+      - mirofish-net
+
+  # ============================================================
+  # ChromaDB — Vector Embedding Database
+  # ============================================================
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: mirofish-chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - chromadb_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=FALSE
+    restart: unless-stopped
+    networks:
+      - mirofish-net
+
+  # ============================================================
+  # Whisper ASR — Audio/Video Transcription Service
+  # ============================================================
+  whisper:
+    image: onerahmet/openai-whisper-asr-webservice:latest
+    container_name: mirofish-whisper
+    ports:
+      - "9000:9000"
+    environment:
+      - ASR_MODEL=base
+      - ASR_ENGINE=openai_whisper
+    restart: unless-stopped
+    networks:
+      - mirofish-net
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  chromadb_data:
+
+networks:
+  mirofish-net:
+    driver: bridge

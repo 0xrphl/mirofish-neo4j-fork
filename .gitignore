@@ -1,0 +1,49 @@
+# ============================================================
+# MiroFish Neo4j — .gitignore
+# ============================================================
+
+# --- Environment & Secrets ---
+.env
+*.env.local
+*.env.production
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# --- Output & Generated Files ---
+output/
+reports/
+calls/
+docs/
+uploads/
+templates/
+
+# --- Database Volumes (local dev) ---
+neo4j_data/
+chromadb_data/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs ---
+*.log
+logs/
