@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/banner.png" alt="MiroFish Neo4j Fork" width="100%"/>
+![MiroFish Neo4j Fork](images/banner.png)
 
 # MiroFish Neo4j Fork
 
@@ -35,50 +35,49 @@ The original [MiroFish](https://github.com/666ghj/MiroFish) depends on **Zep Clo
 
 ## Screenshots
 
-<div align="center">
-
 ### MiroFish Homepage
-<img src="images/homepage.png" alt="MiroFish Homepage" width="90%"/>
-<br/><sub>MiroFish prediction engine — upload documents and build knowledge graphs</sub>
 
-<br/><br/>
+![MiroFish Homepage](images/homepage.png)
+
+> MiroFish prediction engine — upload documents and build knowledge graphs
 
 ### Knowledge Graph Building
-<img src="images/graph-build.png" alt="Graph Build — Dual View" width="90%"/>
-<br/><sub>Ontology generation + graph construction from uploaded documents</sub>
 
-<br/><br/>
+![Graph Build](images/graph-build.png)
+
+> Ontology generation + graph construction from uploaded documents
 
 ### Full-Screen Knowledge Graph
-<img src="images/graph-fullscreen.png" alt="Full Screen Graph" width="90%"/>
-<br/><sub>Interactive graph visualization with entities and relationships</sub>
 
-<br/><br/>
+![Full Screen Graph](images/graph-fullscreen.png)
+
+> Interactive graph visualization with entities and relationships
 
 ### Agent Persona Generation
-<img src="images/agent-personas-graph.png" alt="Agent Personas with Graph" width="90%"/>
-<img src="images/agent-personas-dual.png" alt="Agent Personas Dual View" width="90%"/>
-<br/><sub>AI-generated agent personas from the knowledge graph</sub>
 
-<br/><br/>
+![Agent Personas](images/agent-personas-graph.png)
+
+![Agent Personas Dual View](images/agent-personas-dual.png)
+
+> AI-generated agent personas from the knowledge graph
 
 ### Simulation Setup
-<img src="images/simulation-setup.png" alt="Simulation Setup" width="90%"/>
-<br/><sub>Custom agent configuration before running the simulation</sub>
 
-<br/><br/>
+![Simulation Setup](images/simulation-setup.png)
+
+> Custom agent configuration before running the simulation
 
 ### Running Simulation
-<img src="images/simulation-running.png" alt="Running Simulation" width="90%"/>
-<br/><sub>Parallel multi-agent simulation with real-time interaction view</sub>
 
-<br/><br/>
+![Running Simulation](images/simulation-running.png)
+
+> Parallel multi-agent simulation with real-time interaction view
 
 ### Final Report & Agent Chat
-<img src="images/final-report.png" alt="Final Report" width="90%"/>
-<br/><sub>Comprehensive report with graph view and interactive agent Q&A</sub>
 
-</div>
+![Final Report](images/final-report.png)
+
+> Comprehensive report with graph view and interactive agent Q&A
 
 ---
 
@@ -148,13 +147,6 @@ docker compose up -d
 ├── README.md
 │
 ├── images/                   # Screenshots for documentation
-│   ├── banner.png
-│   ├── graph-build.png
-│   ├── graph-fullscreen.png
-│   ├── agent-personas-dual.png
-│   ├── simulation-setup.png
-│   ├── simulation-running.png
-│   └── final-report.png
 │
 └── patches/                  # Neo4j patches (auto-applied on startup)
     ├── entrypoint.sh               # Startup script that applies all patches
