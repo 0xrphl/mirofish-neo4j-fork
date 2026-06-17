@@ -189,6 +189,52 @@ docker compose up -d
 
 ---
 
+## Industry Applications: Predictive Markets & Agentic Consensus
+
+MiroFish Neo4j Fork is not just a research tool — it is a **production-grade infrastructure** for building intelligent prediction systems. The combination of multi-agent simulation, knowledge graphs, and parallel consensus makes it uniquely suited for high-stakes forecasting environments.
+
+### 🎯 Predictive Markets & Autonomous Trading
+
+This engine can serve as the **decision-making backbone** for prediction market platforms like [Polymarket](https://polymarket.com/), [Kalshi](https://kalshi.com/), and decentralized forecasting protocols:
+
+- **Autonomous Market Agents** — Deploy specialized AI agents that independently research, reason, and form probabilistic forecasts on real-world events (elections, macro indicators, geopolitical outcomes).
+- **Bot Trading Pipelines** — Pipe agent consensus outputs directly into trading strategies. Each agent acts as an independent analyst; the aggregated signal drives position sizing and market entry/exit.
+- **Event-Driven Forecasting** — Upload breaking news, earnings reports, or policy documents. The system builds a knowledge graph in real time and spawns agents to evaluate downstream effects — enabling rapid, evidence-based market positioning.
+
+### 🤖 Agentic Parallel Consensus
+
+Unlike single-model inference, MiroFish runs **parallel multi-agent simulations** where each agent operates with a distinct persona, knowledge base, and reasoning strategy:
+
+- **Diverse Cognitive Profiles** — Agents are generated from the knowledge graph with unique expertise, biases, and analytical lenses. This mirrors ensemble methods in ML — reducing variance and improving prediction robustness.
+- **Structured Deliberation** — Agents interact, challenge each other's reasoning, and converge on consensus through structured debate rounds. The final output is not a single opinion but a **calibrated collective forecast**.
+- **Consensus Confidence Scoring** — The degree of agent agreement provides a built-in confidence metric. High consensus = high-conviction trade signal. Divergence = uncertainty flag.
+
+### 📈 Predictive Event Analysis Roadmap
+
+| Capability | Status | Description |
+|---|---|---|
+| Knowledge graph from unstructured data | ✅ Live | Ingest documents, news, transcripts → structured graph |
+| Multi-agent persona generation | ✅ Live | Graph-aware agents with domain expertise |
+| Parallel agent simulation & debate | ✅ Live | Independent reasoning + structured consensus |
+| Final consensus report with confidence | ✅ Live | Aggregated prediction with supporting evidence |
+| Prediction market API integration | 🔜 Roadmap | Direct integration with Polymarket / Kalshi APIs |
+| Real-time event stream ingestion | 🔜 Roadmap | Live news feeds → continuous graph updates → agent re-evaluation |
+| Backtesting framework | 🔜 Roadmap | Historical event replay to validate agent accuracy |
+| Portfolio-level signal aggregation | 🔜 Roadmap | Multi-event, multi-market position management |
+| On-chain agent wallets | 🔜 Roadmap | Autonomous agents with signing capability for DeFi prediction markets |
+
+### 🏭 Why This Architecture Wins
+
+1. **Self-hosted & private** — Your trading signals, data sources, and agent strategies never leave your infrastructure. Zero data leakage to third-party APIs (beyond LLM calls).
+2. **Knowledge graph advantage** — Neo4j provides structured relational reasoning that flat-context LLMs cannot. Agents reason over entity relationships, causal chains, and temporal dependencies.
+3. **Scalable consensus** — Spin up 5 agents or 50. More agents = richer deliberation = more robust predictions. The architecture scales horizontally.
+4. **Auditable reasoning** — Every agent's reasoning chain is logged and queryable. Full transparency into *why* the system made a particular prediction — critical for regulatory compliance and strategy iteration.
+5. **Model-agnostic** — Swap GPT-4o for Claude, Llama, Mistral, or any OpenAI-compatible endpoint. Mix models across agents for cognitive diversity.
+
+> **TL;DR** — MiroFish Neo4j Fork transforms multi-agent AI simulation into an actionable prediction engine. Feed it information, let agents deliberate in parallel, extract consensus forecasts, and use those signals to trade prediction markets with conviction.
+
+---
+
 ## Acknowledgments
 
 Fork of [**MiroFish**](https://github.com/666ghj/MiroFish) by the MiroFish team. Simulation engine powered by [OASIS](https://github.com/camel-ai/oasis) from CAMEL-AI.
